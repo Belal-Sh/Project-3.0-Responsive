@@ -111,8 +111,11 @@ aside .menu-bars i {
 }
 
 aside input[type=checkbox]:checked~div {
+  -webkit-transform: translate(0%);
   transform: translate(0%);
+  -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+
 }
 
 /* input[type=checkbox]:checked .side-menu{
@@ -133,9 +136,10 @@ aside {
   width: 18em;
   padding: 3.5em 0 0 1.5em;
   background-color: #f64242;
+  -webkit-transform: translate(100%);
   transform: translate(100%);
-  z-index: 5
-  transition: all 0.5s ease-in-out;
+  -webkit-z-index: 5 transition: all 0.5s ease-in-out;
+  index: 5 transition: all 0.5s ease-in-out;
 
 }
 
@@ -226,9 +230,24 @@ aside>a i {
   width: 65%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 5;
-  padding: 60px;
+  padding: 5vw;
   border-radius: 1vh;
 }
+@media only screen and (max-width: 600px) {
+  .second-section-block,
+  .third-section-block,
+  .fourth-section-block,
+  .fifth-section-block {
+    text-align: center;
+    width: 90%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    padding: 0.5em;
+    border-radius: 1vh;
+  }
+
+}
+
 
 .second-section-block h2,
 .third-section-block h2,
@@ -292,6 +311,11 @@ aside>a i {
   text-shadow: 1px 1px 1px #888;
   z-index: 4;
   position: relative;
+}
+@media only screen and (max-width: 600px){
+  .first-section .first-section-header h2{
+    font-size: 20vw;
+  }
 }
 
 /* Second Secton */
