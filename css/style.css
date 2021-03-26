@@ -21,8 +21,8 @@ aside label {
   height: 0px;
   position: fixed;
   cursor: pointer;
-  top: 20px;
-  right: 20px;
+  top: 1em;
+  right: 1em;
   z-index: 6;
 }
 
@@ -33,21 +33,19 @@ aside input[type=checkbox] {
 }
 
 aside label {
-  width: 40px;
-  height: 40px;
+  padding: 1.4em 1.4em;
   display: flex;
 }
 
 aside .menu-bars {
   margin-left: auto;
   background-color: rgba(255, 255, 255, 0.15);
-  height: 40px;
-  width: 40px;
+  padding: 0.8em 0.9em;
   border-radius: 50%;
   display: flex;
   position: fixed;
-  top: 20px;
-  right: 20px;
+  top: 1em;
+  right: 1em;
   text-decoration: none;
   border: 1px solid transparent;
 }
@@ -100,8 +98,8 @@ aside {
   box-shadow: 0px 0px 1.5em 0px rgb(0, 0, 0, 0.2);
   -webkit-transform: translate(100%);
   transform: translate(100%);
-  -webkit-z-index: 5 transition: all 0.5s ease-in-out;
-  index: 5 transition: all 0.5s ease-in-out;
+  z-index: 5;
+
 }
 
 .side-menu .close-button {
@@ -148,22 +146,19 @@ aside>a i {
   position: relative;
 }
 
-.first-section .container,
 .second-section .container,
 .third-section .container,
 .fourth-section .container,
 .fifth-section .container {
-  background-image: url(../images/jamie-morrison-VXom6ACaGR0-unsplash.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   display: flex;
-  height: 100vh;
   justify-content: center;
   align-items: center;
-  max-height: 100vh;
   position: relative;
+  padding: 8em 0;
 }
 
 .first-section .container::before,
@@ -195,22 +190,6 @@ aside>a i {
   border-radius: 1vh;
 }
 
-@media only screen and (max-width: 600px) {
-
-  .second-section-block,
-  .third-section-block,
-  .fourth-section-block,
-  .fifth-section-block {
-    text-align: center;
-    width: 90%;
-    height: 90%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 5;
-    padding: 0.5em;
-    border-radius: 1vh;
-  }
-}
-
 .second-section-block h2,
 .third-section-block h2,
 .fourth-section-block h2,
@@ -238,15 +217,6 @@ aside>a i {
   font-size: 0.9em;
 }
 
-@media only screen and (max-width: 600px) {
-
-  .second-section-block p,
-  .third-section-block p,
-  .fourth-section-block p,
-  .fifth-section-block p {
-    font-size: 1em;
-  }
-}
 
 .second-section a,
 .third-section a,
@@ -257,17 +227,32 @@ aside>a i {
   border-radius: 0.5vh;
   color: #fff;
   font-size: 16px;
-  width: 150px;
-  height: 40px;
+  width: 10em;
   margin: auto;
   text-decoration: none;
   text-transform: uppercase;
-  line-height: 2em;
+  line-height: 2.5em;
+}
+.second-section a:hover,
+.third-section a:hover,
+.fourth-section a:hover,
+.fifth-section a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s;
 }
 
 /* first section */
 .first-section .container {
   background-image: url(../images/sailing-vessel-3544039_1280.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 20% 0;
 }
 
 .first-section .first-section-header {
@@ -283,12 +268,6 @@ aside>a i {
   text-shadow: 1px 1px 1px #888;
   z-index: 4;
   position: relative;
-}
-
-@media only screen and (max-width: 600px) {
-  .first-section .first-section-header h2 {
-    font-size: 20vw;
-  }
 }
 
 /* Second Secton */
@@ -314,9 +293,6 @@ aside>a i {
 /* Footer */
 footer {
   background-color: #f64242;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
   padding: 6vw 18vw;
   text-align: center;
 }
@@ -346,9 +322,8 @@ footer {
 
 .contact-form form input {
   background-color: rgba(255, 255, 255, 0.1);
-  height: 2.7em;
   width: 100%;
-  padding: 1em;
+  padding: 0.8em;
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 0.3em;
   margin-bottom: 1vh;
@@ -360,7 +335,6 @@ footer {
 
 .contact-form textarea {
   background-color: rgba(255, 255, 255, 0.1);
-  height: 10em;
   width: 100%;
   padding: 1em;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -379,8 +353,13 @@ footer {
   font-weight: bold;
   border-radius: 0.3em;
   text-transform: uppercase;
-  height: 3em;
-  width: 150px;
+  padding: 1em 0;
+  width: 12em;
+}
+.contact-form button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.5s;
+
 }
 
 ::placeholder {
@@ -399,11 +378,47 @@ footer {
   grid-column: 2/3;
 }
 
+footer .social-icons {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 3em;
+}
+
+footer .social-icons li {
+  font-size: 26px;
+  width: 2.5em;
+  line-height: 2.5em;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid transparent;
+}
+
+footer .social-icons li:hover {
+  opacity: 0.5;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+footer .social-icons li:nth-child(2) {
+  margin: 0 0.7em;
+}
+
+footer .social-icons li i {
+  color: #fff;
+}
+
 @media only screen and (max-width: 900px) {
   .contact-form form .textarea-sec {
     grid-column: 1/3;
   }
 
+  .first-section .container {
+    padding:30% 0;
+  }
+
+  .first-section .first-section-header h2 {
+    font-size: 20vw;
+  }
   .contact-form form .name-sec {
     grid-column: 1/3;
   }
@@ -427,32 +442,59 @@ footer {
   }
 }
 
-footer .social-icons {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  margin-top: 3em;
-}
+@media only screen and (max-width: 600px) {
+  .second-section .container,
+  .third-section .container,
+  .fourth-section .container,
+  .fifth-section .container {
+    padding: 5em 0;
+  }
 
-footer .social-icons li {
-  font-size: 26px;
-  height: 2.5em;
-  width: 2.5em;
-  line-height: 2.5em;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.15);
-  border: 1px solid transparent;
-}
+  .second-section-block,
+  .third-section-block,
+  .fourth-section-block,
+  .fifth-section-block {
+    text-align: center;
+    width: 90%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    padding: 0.5em;
+    border-radius: 1vh;
+  }
 
-footer .social-icons li:hover {
-  opacity: 0.5;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-}
+  .first-section .container {
+    padding:70% 0;
+  }
 
-footer .social-icons li:nth-child(2) {
-  margin: 0 0.7em;
-}
+  .first-section .first-section-header h2 {
+    font-size: 20vw;
+  }
+  .second-section-block p,
+  .third-section-block p,
+  .fourth-section-block p,
+  .fifth-section-block p {
+    font-size: 1em;
+  }
 
-footer .social-icons li i {
-  color: #fff;
+  .contact-form form .name-sec {
+    grid-column: 1/3;
+  }
+
+  .contact-form form .email-sec {
+    grid-column: 1/3;
+  }
+
+  .contact-form form button {
+    grid-column: 1/3;
+    width: 100%;
+    margin: auto;
+  }
+
+  footer {
+    padding: 6vw 5vw;
+  }
+
+  .contact-form form {
+    grid-gap: 2vh 0vh;
+  }
 }
